@@ -60,18 +60,21 @@ class AboutPicture extends StatelessWidget {
                                 .addFavourite(picture);
                             message = 'Added to favourites';
                           }
-                          ScaffoldMessenger.of(context).removeCurrentSnackBar();
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              backgroundColor: const Color(0xFF111111),
-                              content: Text(
-                                message,
-                                style: const TextStyle(
-                                  color: Colors.white,
+                          if (context.mounted) {
+                            ScaffoldMessenger.of(context)
+                                .removeCurrentSnackBar();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                backgroundColor: const Color(0xFF111111),
+                                content: Text(
+                                  message,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
-                            ),
-                          );
+                            );
+                          }
                         },
                         icon: Icon(
                           isFavourite ? Icons.favorite : Icons.favorite_outline,
@@ -107,7 +110,7 @@ class AboutPicture extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 16),
                   child: Center(
                     child: Text(
-                      'credit: ${picture.copyright}',
+                      'credit: ${picture.copyright!.replaceAll('\n', '')}',
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.normal,

@@ -35,9 +35,7 @@ void _setupRemoteBloc() {
 }
 
 void _setupLocalBloc() {
-  sl.registerFactory(
-    () => LocalAstroPictureCubit(sl.get<PictureDao>()),
-  );
+  sl.registerFactory(() => LocalAstroPictureCubit(sl.get<PictureDao>()));
 }
 
 Future<void> _setupHive() async {
