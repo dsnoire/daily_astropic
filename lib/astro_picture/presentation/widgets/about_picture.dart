@@ -1,5 +1,7 @@
 import 'package:daily_astropic/astro_picture/extensions/date_format_extension.dart';
+import 'package:daily_astropic/astro_picture/presentation/bloc/local_astro_picture_cubit/local_astro_picture_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../models/picture/picture.dart';
 
@@ -34,10 +36,48 @@ class AboutPicture extends StatelessWidget {
                       ),
                     ),
                   ),
-                  IconButton(
-                    iconSize: 28,
-                    onPressed: () {},
-                    icon: const Icon(Icons.favorite_outline),
+                  BlocBuilder<LocalAstroPictureCubit, LocalAstroPictureState>(
+                    builder: (context, state) {
+                      bool isFavourite = false;
+                      state.maybeWhen(
+                        loaded: (favourites) {
+                          isFavourite = favourites.contains(picture);
+                        },
+                        orElse: () {},
+                      );
+                      return IconButton(
+                        iconSize: 28,
+                        onPressed: () async {
+                          String message;
+                          if (isFavourite) {
+                            await context
+                                .read<LocalAstroPictureCubit>()
+                                .deleteFavourite(picture);
+                            message = 'Deleted from favourites';
+                          } else {
+                            await context
+                                .read<LocalAstroPictureCubit>()
+                                .addFavourite(picture);
+                            message = 'Added to favourites';
+                          }
+                          ScaffoldMessenger.of(context).removeCurrentSnackBar();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              backgroundColor: const Color(0xFF111111),
+                              content: Text(
+                                message,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                        icon: Icon(
+                          isFavourite ? Icons.favorite : Icons.favorite_outline,
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

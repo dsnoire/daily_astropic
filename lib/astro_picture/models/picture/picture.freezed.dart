@@ -20,20 +20,26 @@ Picture _$PictureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Picture {
+  @HiveField(0)
   String get date => throw _privateConstructorUsedError;
+  @HiveField(1)
   String get explanation => throw _privateConstructorUsedError;
-  String? get hdurl =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @HiveField(2)
+  String? get hdurl => throw _privateConstructorUsedError;
   @JsonKey(name: 'media_type')
-  String get mediaType =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @HiveField(3)
+  String get mediaType => throw _privateConstructorUsedError;
   @JsonKey(name: 'service_version')
-  String get serviceVersion =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @HiveField(4)
+  String get serviceVersion => throw _privateConstructorUsedError;
   @JsonKey(name: 'thumbnail_url')
+  @HiveField(5)
   String? get thumbnailUrl => throw _privateConstructorUsedError;
+  @HiveField(6)
   String get title => throw _privateConstructorUsedError;
+  @HiveField(7)
   String get url => throw _privateConstructorUsedError;
+  @HiveField(8)
   String? get copyright => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,15 +53,15 @@ abstract class $PictureCopyWith<$Res> {
       _$PictureCopyWithImpl<$Res, Picture>;
   @useResult
   $Res call(
-      {String date,
-      String explanation,
-      String? hdurl,
-      @JsonKey(name: 'media_type') String mediaType,
-      @JsonKey(name: 'service_version') String serviceVersion,
-      @JsonKey(name: 'thumbnail_url') String? thumbnailUrl,
-      String title,
-      String url,
-      String? copyright});
+      {@HiveField(0) String date,
+      @HiveField(1) String explanation,
+      @HiveField(2) String? hdurl,
+      @JsonKey(name: 'media_type') @HiveField(3) String mediaType,
+      @JsonKey(name: 'service_version') @HiveField(4) String serviceVersion,
+      @JsonKey(name: 'thumbnail_url') @HiveField(5) String? thumbnailUrl,
+      @HiveField(6) String title,
+      @HiveField(7) String url,
+      @HiveField(8) String? copyright});
 }
 
 /// @nodoc
@@ -130,15 +136,15 @@ abstract class _$$PictureImplCopyWith<$Res> implements $PictureCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String date,
-      String explanation,
-      String? hdurl,
-      @JsonKey(name: 'media_type') String mediaType,
-      @JsonKey(name: 'service_version') String serviceVersion,
-      @JsonKey(name: 'thumbnail_url') String? thumbnailUrl,
-      String title,
-      String url,
-      String? copyright});
+      {@HiveField(0) String date,
+      @HiveField(1) String explanation,
+      @HiveField(2) String? hdurl,
+      @JsonKey(name: 'media_type') @HiveField(3) String mediaType,
+      @JsonKey(name: 'service_version') @HiveField(4) String serviceVersion,
+      @JsonKey(name: 'thumbnail_url') @HiveField(5) String? thumbnailUrl,
+      @HiveField(6) String title,
+      @HiveField(7) String url,
+      @HiveField(8) String? copyright});
 }
 
 /// @nodoc
@@ -205,44 +211,53 @@ class __$$PictureImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 0)
 class _$PictureImpl implements _Picture {
   _$PictureImpl(
-      {required this.date,
-      required this.explanation,
-      this.hdurl,
-      @JsonKey(name: 'media_type') required this.mediaType,
-      @JsonKey(name: 'service_version') required this.serviceVersion,
-      @JsonKey(name: 'thumbnail_url') this.thumbnailUrl,
-      required this.title,
-      required this.url,
-      this.copyright});
+      {@HiveField(0) required this.date,
+      @HiveField(1) required this.explanation,
+      @HiveField(2) this.hdurl,
+      @JsonKey(name: 'media_type') @HiveField(3) required this.mediaType,
+      @JsonKey(name: 'service_version')
+      @HiveField(4)
+      required this.serviceVersion,
+      @JsonKey(name: 'thumbnail_url') @HiveField(5) this.thumbnailUrl,
+      @HiveField(6) required this.title,
+      @HiveField(7) required this.url,
+      @HiveField(8) this.copyright});
 
   factory _$PictureImpl.fromJson(Map<String, dynamic> json) =>
       _$$PictureImplFromJson(json);
 
   @override
+  @HiveField(0)
   final String date;
   @override
+  @HiveField(1)
   final String explanation;
   @override
+  @HiveField(2)
   final String? hdurl;
-// ignore: invalid_annotation_target
   @override
   @JsonKey(name: 'media_type')
+  @HiveField(3)
   final String mediaType;
-// ignore: invalid_annotation_target
   @override
   @JsonKey(name: 'service_version')
+  @HiveField(4)
   final String serviceVersion;
-// ignore: invalid_annotation_target
   @override
   @JsonKey(name: 'thumbnail_url')
+  @HiveField(5)
   final String? thumbnailUrl;
   @override
+  @HiveField(6)
   final String title;
   @override
+  @HiveField(7)
   final String url;
   @override
+  @HiveField(8)
   final String? copyright;
 
   @override
@@ -292,38 +307,51 @@ class _$PictureImpl implements _Picture {
 
 abstract class _Picture implements Picture {
   factory _Picture(
-      {required final String date,
-      required final String explanation,
-      final String? hdurl,
-      @JsonKey(name: 'media_type') required final String mediaType,
-      @JsonKey(name: 'service_version') required final String serviceVersion,
-      @JsonKey(name: 'thumbnail_url') final String? thumbnailUrl,
-      required final String title,
-      required final String url,
-      final String? copyright}) = _$PictureImpl;
+      {@HiveField(0) required final String date,
+      @HiveField(1) required final String explanation,
+      @HiveField(2) final String? hdurl,
+      @JsonKey(name: 'media_type')
+      @HiveField(3)
+      required final String mediaType,
+      @JsonKey(name: 'service_version')
+      @HiveField(4)
+      required final String serviceVersion,
+      @JsonKey(name: 'thumbnail_url') @HiveField(5) final String? thumbnailUrl,
+      @HiveField(6) required final String title,
+      @HiveField(7) required final String url,
+      @HiveField(8) final String? copyright}) = _$PictureImpl;
 
   factory _Picture.fromJson(Map<String, dynamic> json) = _$PictureImpl.fromJson;
 
   @override
+  @HiveField(0)
   String get date;
   @override
+  @HiveField(1)
   String get explanation;
   @override
+  @HiveField(2)
   String? get hdurl;
-  @override // ignore: invalid_annotation_target
+  @override
   @JsonKey(name: 'media_type')
+  @HiveField(3)
   String get mediaType;
-  @override // ignore: invalid_annotation_target
+  @override
   @JsonKey(name: 'service_version')
+  @HiveField(4)
   String get serviceVersion;
-  @override // ignore: invalid_annotation_target
+  @override
   @JsonKey(name: 'thumbnail_url')
+  @HiveField(5)
   String? get thumbnailUrl;
   @override
+  @HiveField(6)
   String get title;
   @override
+  @HiveField(7)
   String get url;
   @override
+  @HiveField(8)
   String? get copyright;
   @override
   @JsonKey(ignore: true)

@@ -1,4 +1,4 @@
-import 'package:daily_astropic/astro_picture/data/remote_data_source.dart';
+import 'package:daily_astropic/astro_picture/data/remote/remote_data_source.dart';
 import 'package:daily_astropic/astro_picture/models/picture/picture.dart';
 
 class DataRepository {

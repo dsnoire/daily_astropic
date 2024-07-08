@@ -1,5 +1,5 @@
 import 'package:daily_astropic/astro_picture/presentation/views/favourites_view.dart';
-import 'package:daily_astropic/astro_picture/presentation/views/picture_details.dart';
+import 'package:daily_astropic/astro_picture/presentation/views/picture_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -40,7 +40,7 @@ class HomeView extends StatelessWidget {
               OutlinedButton(
                 onPressed: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const PictureDetails(),
+                    builder: (context) => const PictureDetailsView(),
                   ),
                 ),
                 style: OutlinedButton.styleFrom(

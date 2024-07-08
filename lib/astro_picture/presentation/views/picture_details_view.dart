@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../di/service_locator.dart';
-import '../../data/data_repository.dart';
-import '../../data/remote_data_source.dart';
+import '../../../utils/di/service_locator.dart';
 import '../widgets/about_picture.dart';
 import '../widgets/media_content.dart';
-import '../bloc/astro_picture_bloc/astro_picture_cubit.dart';
+import '../bloc/astro_picture_cubit/astro_picture_cubit.dart';
 
-class PictureDetails extends StatelessWidget {
-  const PictureDetails({
+class PictureDetailsView extends StatelessWidget {
+  const PictureDetailsView({
     super.key,
   });
 
@@ -39,7 +37,13 @@ class PictureDetails extends StatelessWidget {
               ],
             ),
             error: (message) => Center(
-              child: Text('Error: $message'),
+              child: Text(
+                'Something went wrong: $message',
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           );
         },

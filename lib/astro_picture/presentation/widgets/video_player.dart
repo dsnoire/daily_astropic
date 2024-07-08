@@ -40,9 +40,6 @@ class _VideoPlayerState extends State<VideoPlayer> {
       controller: _controller,
       showVideoProgressIndicator: true,
       progressIndicatorColor: Colors.purple,
-      onReady: () {
-        print('ready');
-      },
     );
   }
 }
