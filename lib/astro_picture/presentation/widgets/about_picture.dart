@@ -50,19 +50,14 @@ class AboutPicture extends StatelessWidget {
                         onPressed: () async {
                           String message;
                           if (isFavourite) {
-                            await context
-                                .read<LocalAstroPictureCubit>()
-                                .deleteFavourite(picture);
+                            await context.read<LocalAstroPictureCubit>().deleteFavourite(picture);
                             message = 'Deleted from favourites';
                           } else {
-                            await context
-                                .read<LocalAstroPictureCubit>()
-                                .addFavourite(picture);
+                            await context.read<LocalAstroPictureCubit>().addFavourite(picture);
                             message = 'Added to favourites';
                           }
                           if (context.mounted) {
-                            ScaffoldMessenger.of(context)
-                                .removeCurrentSnackBar();
+                            ScaffoldMessenger.of(context).removeCurrentSnackBar();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 backgroundColor: const Color(0xFF111111),

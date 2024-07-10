@@ -12,15 +12,12 @@ class Picture with _$Picture {
     @HiveField(1) required String explanation,
     @HiveField(2) String? hdurl,
     @JsonKey(name: 'media_type') @HiveField(3) required String mediaType,
-    @JsonKey(name: 'service_version')
-    @HiveField(4)
-    required String serviceVersion,
+    @JsonKey(name: 'service_version') @HiveField(4) required String serviceVersion,
     @JsonKey(name: 'thumbnail_url') @HiveField(5) String? thumbnailUrl,
     @HiveField(6) required String title,
     @HiveField(7) required String url,
     @HiveField(8) String? copyright,
   }) = _Picture;
 
-  factory Picture.fromJson(Map<String, dynamic> json) =>
-      _$PictureFromJson(json);
+  factory Picture.fromJson(Map<String, dynamic> json) => _$PictureFromJson(json);
 }

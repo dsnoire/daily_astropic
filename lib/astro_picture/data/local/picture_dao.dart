@@ -20,6 +20,5 @@ class PictureDao {
 
   Future<void> deleteAllFavourites() async => await _box.clear();
 
-  List<Picture> get getFavourites =>
-      _box.values.toSet().toList().cast<Picture>();
+  List<Picture> get getFavourites => _box.values.toSet().toList().cast<Picture>();
 }

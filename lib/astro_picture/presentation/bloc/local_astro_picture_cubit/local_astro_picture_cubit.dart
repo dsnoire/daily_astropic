@@ -9,8 +9,7 @@ part 'local_astro_picture_cubit.freezed.dart';
 
 class LocalAstroPictureCubit extends Cubit<LocalAstroPictureState> {
   final PictureDao _pictureDao;
-  LocalAstroPictureCubit(this._pictureDao)
-      : super(const LocalAstroPictureState.loading());
+  LocalAstroPictureCubit(this._pictureDao) : super(const LocalAstroPictureState.loading());
 
   void getFavourites() {
     emit(const LocalAstroPictureState.loading());
