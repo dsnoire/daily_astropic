@@ -27,11 +27,15 @@ class FavouritesList extends StatelessWidget {
               ),
             ),
           ),
-          leading: CachedNetworkImage(
-            imageUrl: favourite.hdurl != null
-                ? favourite.hdurl!
-                : favourite.thumbnailUrl!,
-            placeholder: (context, url) => const CircularProgressIndicator(),
+          leading: SizedBox(
+            width: 90,
+            child: CachedNetworkImage(
+              imageUrl: favourite.hdurl != null
+                  ? favourite.hdurl!
+                  : favourite.thumbnailUrl!,
+              fit: BoxFit.cover,
+              placeholder: (context, url) => const CircularProgressIndicator(),
+            ),
           ),
           title: Text(
             favourite.title,
