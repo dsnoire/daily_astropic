@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:daily_astropic/utils/extensions/date_format_extension.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -31,7 +32,9 @@ class FavouritesList extends StatelessWidget {
                   ? favourite.hdurl!
                   : favourite.thumbnailUrl!,
               fit: BoxFit.cover,
-              placeholder: (context, url) => const CircularProgressIndicator(),
+              placeholder: (context, url) => const Center(
+                child: CircularProgressIndicator(),
+              ),
             ),
           ),
           title: Text(
