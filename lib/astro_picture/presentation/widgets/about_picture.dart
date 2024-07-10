@@ -1,4 +1,4 @@
-import 'package:daily_astropic/astro_picture/extensions/date_format_extension.dart';
+import 'package:daily_astropic/utils/extensions/date_format_extension.dart';
 import 'package:daily_astropic/astro_picture/presentation/bloc/local_astro_picture_cubit/local_astro_picture_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

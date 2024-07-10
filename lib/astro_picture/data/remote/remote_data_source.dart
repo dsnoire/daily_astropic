@@ -1,13 +1,16 @@
+import 'package:daily_astropic/env/env.dart';
 import 'package:dio/dio.dart';
 
 class RemoteDataSource {
   Future<dynamic> fetchData() async {
     try {
       final response = await Dio().get(
-          'https://api.nasa.gov/planetary/apod?api_key=EQfJ8ec4u9Q67mx7s3Ti69aSpp6xho6hJBKGcyA5&thumbs=true');
+          'https://api.nasa.gov/planetary/apod?api_key=$_apiKey&thumbs=true');
       return response.data;
     } catch (e) {
       throw Exception(e);
     }
   }
+
+  static final _apiKey = Env.key;
 }

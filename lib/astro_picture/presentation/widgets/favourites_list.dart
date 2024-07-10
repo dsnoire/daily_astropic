@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:daily_astropic/astro_picture/extensions/date_format_extension.dart';
+import 'package:daily_astropic/utils/extensions/date_format_extension.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/picture/picture.dart';
