@@ -3,7 +3,7 @@ import 'package:daily_astropic/astro_picture/presentation/bloc/local_astro_pictu
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../models/picture/picture.dart';
+import '../../models/picture.dart';
 
 class AboutPicture extends StatelessWidget {
   final Picture picture;

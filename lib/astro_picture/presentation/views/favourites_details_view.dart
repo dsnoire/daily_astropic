@@ -1,4 +1,4 @@
-import 'package:daily_astropic/astro_picture/models/picture/picture.dart';
+import 'package:daily_astropic/astro_picture/models/picture.dart';
 import 'package:daily_astropic/astro_picture/presentation/widgets/about_picture.dart';
 import 'package:daily_astropic/astro_picture/presentation/widgets/media_content.dart';
 import 'package:flutter/material.dart';

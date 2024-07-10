@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:daily_astropic/utils/extensions/date_format_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../models/picture/picture.dart';
-import '../views/favourites_details_view.dart';
+import '../../models/picture.dart';
 
 class FavouritesList extends StatelessWidget {
   final List<Picture> favourites;
@@ -20,12 +20,9 @@ class FavouritesList extends StatelessWidget {
       itemBuilder: (context, index) {
         final favourite = favourites[index];
         return ListTile(
-          onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => FavouritesDetailsView(
-                picture: favourite,
-              ),
-            ),
+          onTap: () => context.push(
+            '/favourites-details',
+            extra: favourite,
           ),
           leading: SizedBox(
             width: 90,

@@ -2,7 +2,7 @@ import 'package:daily_astropic/astro_picture/data/local/picture_dao.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../models/picture/picture.dart';
+import '../../../models/picture.dart';
 
 part 'local_astro_picture_state.dart';
 part 'local_astro_picture_cubit.freezed.dart';

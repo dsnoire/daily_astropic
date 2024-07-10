@@ -195,8 +195,6 @@ abstract class _$$LoadedImplCopyWith<$Res> {
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Picture picture});
-
-  $PictureCopyWith<$Res> get picture;
 }
 
 /// @nodoc
@@ -210,22 +208,14 @@ class __$$LoadedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? picture = null,
+    Object? picture = freezed,
   }) {
     return _then(_$LoadedImpl(
-      null == picture
+      freezed == picture
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
               as Picture,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PictureCopyWith<$Res> get picture {
-    return $PictureCopyWith<$Res>(_value.picture, (value) {
-      return _then(_value.copyWith(picture: value));
-    });
   }
 }
 
@@ -247,11 +237,12 @@ class _$LoadedImpl implements _Loaded {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedImpl &&
-            (identical(other.picture, picture) || other.picture == picture));
+            const DeepCollectionEquality().equals(other.picture, picture));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, picture);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(picture));
 
   @JsonKey(ignore: true)
   @override

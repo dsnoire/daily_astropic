@@ -1,7 +1,6 @@
-import 'package:daily_astropic/astro_picture/presentation/views/favourites_view.dart';
-import 'package:daily_astropic/astro_picture/presentation/views/picture_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -15,11 +14,7 @@ class HomeView extends StatelessWidget {
         title: const Text('Daily Astro Picture'),
         actions: [
           IconButton(
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const FavouritesView(),
-              ),
-            ),
+            onPressed: () => context.push('/favourites'),
             padding: const EdgeInsets.all(16),
             icon: const Icon(
               Icons.bookmarks_rounded,
@@ -38,11 +33,7 @@ class HomeView extends StatelessWidget {
                 'assets/landing.svg',
               ),
               OutlinedButton(
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const PictureDetailsView(),
-                  ),
-                ),
+                onPressed: () => context.push('/picture-details'),
                 style: OutlinedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(
                     vertical: 18,

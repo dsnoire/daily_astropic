@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:daily_astropic/astro_picture/models/picture/picture.dart';
+import 'package:daily_astropic/astro_picture/models/picture.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:daily_astropic/astro_picture/data/remote/data_repository.dart';

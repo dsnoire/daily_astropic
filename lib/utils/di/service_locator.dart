@@ -1,7 +1,7 @@
 import 'package:daily_astropic/astro_picture/data/local/picture_dao.dart';
 import 'package:daily_astropic/astro_picture/data/remote/data_repository.dart';
 import 'package:daily_astropic/astro_picture/data/remote/remote_data_source.dart';
-import 'package:daily_astropic/astro_picture/models/picture/picture.dart';
+import 'package:daily_astropic/astro_picture/models/picture.dart';
 import 'package:daily_astropic/astro_picture/presentation/bloc/astro_picture_cubit/astro_picture_cubit.dart';
 import 'package:daily_astropic/astro_picture/presentation/bloc/local_astro_picture_cubit/local_astro_picture_cubit.dart';
 import 'package:hive_flutter/hive_flutter.dart';
